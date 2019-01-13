@@ -10,4 +10,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+
+alias vim='nvim'
+# alias node='LD_LIBRARY_PATH=/opt/oldlibs node'
+# source /usr/share/nvm/init-nvm.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/vdrg/.nvm/versions/node/v9.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/vdrg/.nvm/versions/node/v9.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/vdrg/.nvm/versions/node/v9.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/vdrg/.nvm/versions/node/v9.11.2/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

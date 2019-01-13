@@ -6,19 +6,11 @@
 #
 
 #
-# Browser
-#
-
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
-
-#
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 #
@@ -28,6 +20,18 @@ export PAGER='less'
 if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
+
+#
+# Touchscreen
+#
+
+export MOZ_USE_XINPUT2=1
+
+#
+# Misc
+#
+
+export GOPATH=~/go
 
 #
 # Paths
@@ -44,6 +48,9 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  ~/.npm-global/bin
+  ~/.config/yarn/global/node_modules/.bin
+  ~/go/bin
   $path
 )
 
